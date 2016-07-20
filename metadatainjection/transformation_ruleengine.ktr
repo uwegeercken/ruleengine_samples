@@ -11,22 +11,32 @@
     <parameters>
         <parameter>
             <name>parameter_input_filename</name>
-            <default_value/>
+            <default_value>&#x2f;home&#x2f;uwe&#x2f;development&#x2f;transformationen&#x2f;metadata_inject&#x2f;data&#x2f;airports.csv</default_value>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>parameter_input_filename_metadata</name>
+            <default_value>&#x2f;home&#x2f;uwe&#x2f;development&#x2f;transformationen&#x2f;metadata_inject&#x2f;metadata&#x2f;airports_metadata.xlsx</default_value>
             <description/>
         </parameter>
         <parameter>
             <name>parameter_output_filename_ruleengine_results</name>
-            <default_value/>
+            <default_value>output</default_value>
             <description/>
         </parameter>
         <parameter>
             <name>parameter_output_filename_ruleengine_rule_details</name>
-            <default_value/>
+            <default_value>output_details</default_value>
             <description/>
         </parameter>
         <parameter>
             <name>parameter_output_folder</name>
-            <default_value/>
+            <default_value>&#x2f;home&#x2f;uwe&#x2f;development&#x2f;transformationen&#x2f;metadata_inject&#x2f;output</default_value>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>parameter_rule_project_filename</name>
+            <default_value>&#x2f;home&#x2f;uwe&#x2f;development&#x2f;transformationen&#x2f;metadata_inject&#x2f;ruleengine_projects&#x2f;airport_filter_01.zip</default_value>
             <description/>
         </parameter>
     </parameters>
@@ -96,7 +106,7 @@
   <notepads>
     <notepad>
       <note>CSV file input</note>
-      <xloc>64</xloc>
+      <xloc>32</xloc>
       <yloc>64</yloc>
       <width>90</width>
       <heigth>27</heigth>
@@ -117,8 +127,8 @@
     </notepad>
     <notepad>
       <note>run Ruleengine</note>
-      <xloc>288</xloc>
-      <yloc>64</yloc>
+      <xloc>368</xloc>
+      <yloc>304</yloc>
       <width>97</width>
       <heigth>27</heigth>
       <fontname>Cantarell</fontname>
@@ -137,9 +147,9 @@
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>output Ruleengine detailed&#xa;results for failed rulegroups&#xa;and rules</note>
-      <xloc>256</xloc>
-      <yloc>336</yloc>
+      <note>output ruleengine detailed&#xa;results for failed rulegroups&#xa;and rules</note>
+      <xloc>224</xloc>
+      <yloc>416</yloc>
       <width>176</width>
       <heigth>61</heigth>
       <fontname>Cantarell</fontname>
@@ -159,8 +169,8 @@
     </notepad>
     <notepad>
       <note>filter rows that failed&#x2f;passed&#xa;the ruleengine checks</note>
-      <xloc>528</xloc>
-      <yloc>48</yloc>
+      <xloc>656</xloc>
+      <yloc>224</yloc>
       <width>182</width>
       <heigth>44</heigth>
       <fontname>Cantarell</fontname>
@@ -180,8 +190,8 @@
     </notepad>
     <notepad>
       <note>passed rows</note>
-      <xloc>912</xloc>
-      <yloc>128</yloc>
+      <xloc>1008</xloc>
+      <yloc>304</yloc>
       <width>84</width>
       <heigth>27</heigth>
       <fontname>Cantarell</fontname>
@@ -201,10 +211,52 @@
     </notepad>
     <notepad>
       <note>failed rows</note>
-      <xloc>592</xloc>
-      <yloc>336</yloc>
+      <xloc>832</xloc>
+      <yloc>432</yloc>
       <width>77</width>
       <heigth>27</heigth>
+      <fontname>Cantarell</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>bypass ruleengine&#xa;if rule project file&#xa;does not exist</note>
+      <xloc>464</xloc>
+      <yloc>32</yloc>
+      <width>115</width>
+      <heigth>61</heigth>
+      <fontname>Cantarell</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>if there is a rule project file&#x3a;&#xa;all rows that pass the checks&#xa;of the ruleengine will be output&#xa;&#xa;if the rule project file does not exist&#x3a;&#xa;all rows of the input file will be&#xa;output</note>
+      <xloc>1024</xloc>
+      <yloc>48</yloc>
+      <width>226</width>
+      <heigth>129</heigth>
       <fontname>Cantarell</fontname>
       <fontsize>10</fontsize>
       <fontbold>N</fontbold>
@@ -249,11 +301,16 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>CSV file input</from><to>Rule Engine</to><enabled>Y</enabled> </hop>
-  <hop> <from>Rule Engine</from><to>Filter rows</to><enabled>Y</enabled> </hop>
-  <hop> <from>Filter rows</from><to>Text file output</to><enabled>Y</enabled> </hop>
   <hop> <from>Filter rows</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>Y</enabled> </hop>
   <hop> <from>Rule Engine</from><to>Text file output&#x3a; ruleengine details</to><enabled>Y</enabled> </hop>
+  <hop> <from>Filter rows 2</from><to>Rule Engine</to><enabled>Y</enabled> </hop>
+  <hop> <from>Filter rows 2</from><to>Select values</to><enabled>Y</enabled> </hop>
+  <hop> <from>CSV file input</from><to>Get Variables&#x3a; rule_project_file_exists</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get Variables&#x3a; rule_project_file_exists</from><to>Filter rows 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Filter rows</from><to>Select values 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values 2</from><to>Text file output</to><enabled>Y</enabled> </hop>
+  <hop> <from>Rule Engine</from><to>Filter rows</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values</from><to>Text file output</to><enabled>Y</enabled> </hop>
   </order>
   <step>
     <name>CSV file input</name>
@@ -283,7 +340,7 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>96</xloc>
+      <xloc>64</xloc>
       <yloc>128</yloc>
       <draw>Y</draw>
       </GUI>
@@ -302,8 +359,8 @@
            </partitioning>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>608</xloc>
-      <yloc>256</yloc>
+      <xloc>736</xloc>
+      <yloc>432</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -319,7 +376,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-<send_true_to>Text file output</send_true_to>
+<send_true_to>Select values 2</send_true_to>
 <send_false_to>Dummy &#x28;do nothing&#x29;</send_false_to>
     <compare>
 <condition>
@@ -331,8 +388,8 @@
     </compare>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>608</xloc>
-      <yloc>128</yloc>
+      <xloc>736</xloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -348,14 +405,14 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <rule_file_name>&#x24;&#x7b;Internal.Transformation.Filename.Directory&#x7d;&#x2f;ruleengine_projects&#x2f;airport_filter_01.zip</rule_file_name>
+    <rule_file_name>&#x24;&#x7b;parameter_rule_project_filename&#x7d;</rule_file_name>
     <rule_step_main>Filter rows</rule_step_main>
     <rule_step_rule_results>Text file output&#x3a; ruleengine details</rule_step_rule_results>
     <output_type>1</output_type>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>336</xloc>
-      <yloc>128</yloc>
+      <xloc>512</xloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -406,7 +463,7 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>816</xloc>
+      <xloc>928</xloc>
       <yloc>128</yloc>
       <draw>Y</draw>
       </GUI>
@@ -458,8 +515,117 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>336</xloc>
-      <yloc>256</yloc>
+      <xloc>512</xloc>
+      <yloc>432</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Filter rows 2</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>Select values</send_true_to>
+<send_false_to>Rule Engine</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>rule_project_file_exists</leftvalue>
+ <function>&#x3d;</function>
+ <rightvalue/>
+ <value><name>constant</name><type>String</type><text>N</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask>&#x23;</mask></value> </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>512</xloc>
+      <yloc>128</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Select values</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>        <select_unspecified>N</select_unspecified>
+      <remove>        <name>rule_project_file_exists</name>
+      </remove>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>736</xloc>
+      <yloc>128</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Select values 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>        <select_unspecified>N</select_unspecified>
+      <remove>        <name>rule_project_file_exists</name>
+      </remove>      <remove>        <name>ruleengine_groups</name>
+      </remove>      <remove>        <name>ruleengine_groups_failed</name>
+      </remove>      <remove>        <name>ruleengine_rules</name>
+      </remove>      <remove>        <name>ruleengine_rules_failed</name>
+      </remove>      <remove>        <name>ruleengine_actions</name>
+      </remove>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>928</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Get Variables&#x3a; rule_project_file_exists</name>
+    <type>GetVariable</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>rule_project_file_exists</name>
+        <variable>&#x24;&#x7b;rule_project_file_exists&#x7d;</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>288</xloc>
+      <yloc>128</yloc>
       <draw>Y</draw>
       </GUI>
     </step>

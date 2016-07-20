@@ -23,17 +23,22 @@
         </parameter>
         <parameter>
             <name>parameter_output_filename_ruleengine_results</name>
-            <default_value>output</default_value>
+            <default_value>airports_filtered</default_value>
             <description/>
         </parameter>
         <parameter>
             <name>parameter_output_filename_ruleengine_rule_details</name>
-            <default_value>output_details</default_value>
+            <default_value>airports_ruleengine_details</default_value>
             <description/>
         </parameter>
         <parameter>
             <name>parameter_output_folder</name>
             <default_value>&#x2f;home&#x2f;uwe&#x2f;development&#x2f;transformationen&#x2f;metadata_inject&#x2f;output</default_value>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>parameter_rule_project_filename</name>
+            <default_value>&#x2f;home&#x2f;uwe&#x2f;development&#x2f;transformationen&#x2f;metadata_inject&#x2f;ruleengine_projects&#x2f;airport_filter_01.zip</default_value>
             <description/>
         </parameter>
     </parameters>
@@ -103,7 +108,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>432</xloc>
+      <xloc>336</xloc>
       <yloc>128</yloc>
       </entry>
     <entry>
@@ -136,7 +141,7 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>688</xloc>
+      <xloc>992</xloc>
       <yloc>128</yloc>
       </entry>
     <entry>
@@ -146,13 +151,91 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>944</xloc>
+      <xloc>1216</xloc>
       <yloc>128</yloc>
+      </entry>
+    <entry>
+      <name>File Exists</name>
+      <description/>
+      <type>FILE_EXISTS</type>
+      <filename>&#x24;&#x7b;parameter_rule_project_filename&#x7d;</filename>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>496</xloc>
+      <yloc>128</yloc>
+      </entry>
+    <entry>
+      <name>Set variables&#x3a; rule project file exists</name>
+      <description/>
+      <type>SET_VARIABLES</type>
+      <replacevars>Y</replacevars>
+      <filename/>
+      <file_variable_type>JVM</file_variable_type>
+      <fields>
+        <field>
+          <variable_name>rule_project_file_exists</variable_name>
+          <variable_value>Y</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+      </fields>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>688</xloc>
+      <yloc>128</yloc>
+      </entry>
+    <entry>
+      <name>Set variables&#x3a; rule project file does not exist</name>
+      <description/>
+      <type>SET_VARIABLES</type>
+      <replacevars>Y</replacevars>
+      <filename/>
+      <file_variable_type>JVM</file_variable_type>
+      <fields>
+        <field>
+          <variable_name>rule_project_file_exists</variable_name>
+          <variable_value>N</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+      </fields>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>688</xloc>
+      <yloc>240</yloc>
       </entry>
   </entries>
   <hops>
     <hop>
+      <from>Transformation&#x3a; Metainject</from>
+      <to>Success</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
       <from>START</from>
+      <to>File Exists</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>File Exists</from>
+      <to>Set variables&#x3a; rule project file exists</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Set variables&#x3a; rule project file exists</from>
       <to>Transformation&#x3a; Metainject</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -161,8 +244,17 @@
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>Transformation&#x3a; Metainject</from>
-      <to>Success</to>
+      <from>File Exists</from>
+      <to>Set variables&#x3a; rule project file does not exist</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Set variables&#x3a; rule project file does not exist</from>
+      <to>Transformation&#x3a; Metainject</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -194,12 +286,33 @@
     </notepad>
     <notepad>
       <note>run transformation that handles&#xa;the metadata loading from files&#xa;&#xa;it will then inject the metadata&#xa;into the ruleengine transformation</note>
-      <xloc>592</xloc>
+      <xloc>912</xloc>
       <yloc>208</yloc>
       <width>214</width>
       <heigth>95</heigth>
       <fontname>Cantarell</fontname>
       <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>check if the rule&#xa;project file exists</note>
+      <xloc>448</xloc>
+      <yloc>48</yloc>
+      <width>111</width>
+      <heigth>44</heigth>
+      <fontname/>
+      <fontsize>-1</fontsize>
       <fontbold>N</fontbold>
       <fontitalic>N</fontitalic>
       <fontcolorred>0</fontcolorred>

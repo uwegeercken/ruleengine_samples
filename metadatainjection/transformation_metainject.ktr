@@ -11,27 +11,32 @@
     <parameters>
         <parameter>
             <name>parameter_input_filename</name>
-            <default_value/>
+            <default_value>&#x2f;home&#x2f;uwe&#x2f;development&#x2f;transformationen&#x2f;metadata_inject&#x2f;data&#x2f;airports.csv</default_value>
             <description/>
         </parameter>
         <parameter>
             <name>parameter_input_filename_metadata</name>
-            <default_value/>
+            <default_value>&#x2f;home&#x2f;uwe&#x2f;development&#x2f;transformationen&#x2f;metadata_inject&#x2f;metadata&#x2f;airports_metadata.xlsx</default_value>
             <description/>
         </parameter>
         <parameter>
             <name>parameter_output_filename_ruleengine_results</name>
-            <default_value/>
+            <default_value>output</default_value>
             <description/>
         </parameter>
         <parameter>
             <name>parameter_output_filename_ruleengine_rule_details</name>
-            <default_value/>
+            <default_value>output_details</default_value>
             <description/>
         </parameter>
         <parameter>
             <name>parameter_output_folder</name>
-            <default_value/>
+            <default_value>&#x2f;home&#x2f;uwe&#x2f;development&#x2f;transformationen&#x2f;metadata_inject&#x2f;output</default_value>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>parameter_rule_project_filename</name>
+            <default_value>home&#x2f;uwe&#x2f;development&#x2f;transformationen&#x2f;metadata_inject&#x2f;ruleengine_projects&#x2f;airport_filter_01.zip</default_value>
             <description/>
         </parameter>
     </parameters>
