@@ -8,7 +8,9 @@ Contains samples of how you can use the ruleengine in different scenarios.
 
 Note: you will need the JaRE plugin for Pentaho PDI installed to try the samples. Simply start Pentaho PDI, select "Tools" and then "Marketplace" from the menu and then search for "JaRE" or "rule" and simply install the plugin. Once you have completed this, restart PDI and you are ready to go.
 
-Note 2: the PDI jobs and transformation samples have some default parameters for paths to folders and/or files. Make sure that you adjust these before or when running the job or transformation.
+Note 2: you will need the Avro Input plugin to try the discount sample. Simply start Pentaho PDI, select "Tools" and then "Marketplace" and search for the Avro Input plugin and simply install the plugin. Once you have completed this, restart PDI and you are ready to go.
+
+Note 3: the PDI jobs and transformation samples might have some default parameters for paths to folders and/or files. Make sure that you adjust these before or when running the job or transformation.
 
 
     Copyright (C) 2008-2017  Uwe Geercken
@@ -30,5 +32,5 @@ Note 2: the PDI jobs and transformation samples have some default parameters for
  specific language governing permissions and limitations
  under the License.
 
-last update: uwe geercken - 2017-03-04
+last update: uwe geercken - 2017-10-21
 
