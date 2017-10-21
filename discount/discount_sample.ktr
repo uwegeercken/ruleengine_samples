@@ -9,41 +9,402 @@
     <trans_status>0</trans_status>
     <directory>&#x2f;</directory>
     <parameters>
-        <parameter>
-            <name>rules_folder</name>
-            <default_value>&#x2f;tmp</default_value>
-            <description>folder where the project file from the Business Rules Maintennce Tool is located</description>
-        </parameter>
+      <parameter>
+        <name>rules_folder</name>
+        <default_value>&#x2f;home&#x2f;uwe&#x2f;development&#x2f;git&#x2f;ruleengine_samples&#x2f;discount</default_value>
+        <description>folder where the project file from the Business Rules Maintennce Tool is located</description>
+      </parameter>
     </parameters>
     <log>
-<trans-log-table><connection/>
-<schema/>
-<table/>
-<size_limit_lines/>
-<interval/>
-<timeout_days/>
-<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
-<perf-log-table><connection/>
-<schema/>
-<table/>
-<interval/>
-<timeout_days/>
-<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
-<channel-log-table><connection/>
-<schema/>
-<table/>
-<timeout_days/>
-<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
-<step-log-table><connection/>
-<schema/>
-<table/>
-<timeout_days/>
-<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
-<metrics-log-table><connection/>
-<schema/>
-<table/>
-<timeout_days/>
-<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
+      <trans-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <size_limit_lines/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STATUS</id>
+          <enabled>Y</enabled>
+          <name>STATUS</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>STARTDATE</id>
+          <enabled>Y</enabled>
+          <name>STARTDATE</name>
+        </field>
+        <field>
+          <id>ENDDATE</id>
+          <enabled>Y</enabled>
+          <name>ENDDATE</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>DEPDATE</id>
+          <enabled>Y</enabled>
+          <name>DEPDATE</name>
+        </field>
+        <field>
+          <id>REPLAYDATE</id>
+          <enabled>Y</enabled>
+          <name>REPLAYDATE</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>Y</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+        <field>
+          <id>EXECUTING_SERVER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_SERVER</name>
+        </field>
+        <field>
+          <id>EXECUTING_USER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_USER</name>
+        </field>
+        <field>
+          <id>CLIENT</id>
+          <enabled>N</enabled>
+          <name>CLIENT</name>
+        </field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>SEQ_NR</id>
+          <enabled>Y</enabled>
+          <name>SEQ_NR</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>INPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>INPUT_BUFFER_ROWS</name>
+        </field>
+        <field>
+          <id>OUTPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>OUTPUT_BUFFER_ROWS</name>
+        </field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>LOGGING_OBJECT_TYPE</id>
+          <enabled>Y</enabled>
+          <name>LOGGING_OBJECT_TYPE</name>
+        </field>
+        <field>
+          <id>OBJECT_NAME</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_NAME</name>
+        </field>
+        <field>
+          <id>OBJECT_COPY</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_COPY</name>
+        </field>
+        <field>
+          <id>REPOSITORY_DIRECTORY</id>
+          <enabled>Y</enabled>
+          <name>REPOSITORY_DIRECTORY</name>
+        </field>
+        <field>
+          <id>FILENAME</id>
+          <enabled>Y</enabled>
+          <name>FILENAME</name>
+        </field>
+        <field>
+          <id>OBJECT_ID</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_ID</name>
+        </field>
+        <field>
+          <id>OBJECT_REVISION</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_REVISION</name>
+        </field>
+        <field>
+          <id>PARENT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>PARENT_CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>ROOT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>ROOT_CHANNEL_ID</name>
+        </field>
+      </channel-log-table>
+      <step-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>N</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_DATE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_CODE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_CODE</name>
+        </field>
+        <field>
+          <id>METRICS_DESCRIPTION</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DESCRIPTION</name>
+        </field>
+        <field>
+          <id>METRICS_SUBJECT</id>
+          <enabled>Y</enabled>
+          <name>METRICS_SUBJECT</name>
+        </field>
+        <field>
+          <id>METRICS_TYPE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_TYPE</name>
+        </field>
+        <field>
+          <id>METRICS_VALUE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_VALUE</name>
+        </field>
+      </metrics-log-table>
     </log>
     <maxdate>
       <connection/>
@@ -71,18 +432,18 @@
     </slaveservers>
     <clusterschemas>
     </clusterschemas>
-  <created_user>-</created_user>
-  <created_date>2016&#x2f;06&#x2f;01 07&#x3a;28&#x3a;18.231</created_date>
-  <modified_user>-</modified_user>
-  <modified_date>2016&#x2f;06&#x2f;01 07&#x3a;28&#x3a;18.231</modified_date>
+    <created_user>-</created_user>
+    <created_date>2016&#x2f;06&#x2f;01 07&#x3a;28&#x3a;18.231</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2016&#x2f;06&#x2f;01 07&#x3a;28&#x3a;18.231</modified_date>
     <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA&#x3d;</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
     <notepad>
       <note>some input data</note>
-      <xloc>32</xloc>
-      <yloc>64</yloc>
+      <xloc>64</xloc>
+      <yloc>16</yloc>
       <width>105</width>
       <heigth>27</heigth>
       <fontname>Cantarell</fontname>
@@ -102,7 +463,7 @@
     </notepad>
     <notepad>
       <note>calculate the&#xa;actual discount</note>
-      <xloc>608</xloc>
+      <xloc>544</xloc>
       <yloc>240</yloc>
       <width>99</width>
       <heigth>44</heigth>
@@ -122,10 +483,10 @@
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>rules are run&#xa;against the rules</note>
-      <xloc>336</xloc>
-      <yloc>96</yloc>
-      <width>108</width>
+      <note>rules are run&#xa;against the rows of data</note>
+      <xloc>224</xloc>
+      <yloc>112</yloc>
+      <width>151</width>
       <heigth>44</heigth>
       <fontname>Cantarell</fontname>
       <fontsize>10</fontsize>
@@ -137,27 +498,6 @@
       <backgroundcolorred>255</backgroundcolorred>
       <backgroundcolorgreen>205</backgroundcolorgreen>
       <backgroundcolorblue>112</backgroundcolorblue>
-      <bordercolorred>100</bordercolorred>
-      <bordercolorgreen>100</bordercolorgreen>
-      <bordercolorblue>100</bordercolorblue>
-      <drawshadow>Y</drawshadow>
-    </notepad>
-    <notepad>
-      <note>check if the parameter for the&#xa;rule file folder is correctly allocated</note>
-      <xloc>496</xloc>
-      <yloc>32</yloc>
-      <width>224</width>
-      <heigth>44</heigth>
-      <fontname>Cantarell</fontname>
-      <fontsize>10</fontsize>
-      <fontbold>N</fontbold>
-      <fontitalic>N</fontitalic>
-      <fontcolorred>0</fontcolorred>
-      <fontcolorgreen>0</fontcolorgreen>
-      <fontcolorblue>0</fontcolorblue>
-      <backgroundcolorred>255</backgroundcolorred>
-      <backgroundcolorgreen>255</backgroundcolorgreen>
-      <backgroundcolorblue>0</backgroundcolorblue>
       <bordercolorred>100</bordercolorred>
       <bordercolorgreen>100</bordercolorgreen>
       <bordercolorblue>100</bordercolorblue>
@@ -376,13 +716,46 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Data Grid</from><to>Add constants&#x3a; discount_percent</to><enabled>Y</enabled> </hop>
-  <hop> <from>Add constants&#x3a; discount_percent</from><to>Rule Engine</to><enabled>Y</enabled> </hop>
-  <hop> <from>Rule Engine</from><to>Select values</to><enabled>Y</enabled> </hop>
-  <hop> <from>Rule Engine</from><to>Select values 2</to><enabled>Y</enabled> </hop>
-  <hop> <from>Select values 2</from><to>detailed results of the rules</to><enabled>Y</enabled> </hop>
-  <hop> <from>Select values</from><to>Calculator</to><enabled>Y</enabled> </hop>
-  <hop> <from>Calculator</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>Y</enabled> </hop>
+    <hop>
+      <from>Add constants&#x3a; discount_percent</from>
+      <to>Rule Engine</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Rule Engine</from>
+      <to>Select values</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Rule Engine</from>
+      <to>Select values 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values 2</from>
+      <to>detailed results of the rules</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values</from>
+      <to>Calculator</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Calculator</from>
+      <to>Sort rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>Dummy &#x28;do nothing&#x29;</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Avro Input</from>
+      <to>Add constants&#x3a; discount_percent</to>
+      <enabled>Y</enabled>
+    </hop>
   </order>
   <step>
     <name>Add constants&#x3a; discount_percent</name>
@@ -391,10 +764,10 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
     <fields>
       <field>
         <name>discount_percent</name>
@@ -409,12 +782,109 @@
         <set_empty_string>N</set_empty_string>
       </field>
     </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>192</xloc>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>96</xloc>
       <yloc>176</yloc>
       <draw>Y</draw>
-      </GUI>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Avro Input</name>
+    <type>AvroInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+
+    <avro_filename>&#x24;&#x7b;Internal.Transformation.Filename.Directory&#x7d;&#x2f;discount_sample.avro</avro_filename>
+
+    <schema_filename>file&#x3a;&#x2f;&#x2f;&#x2f;home&#x2f;uwe&#x2f;development&#x2f;pcm17&#x2f;discount_sample.avsc</schema_filename>
+
+    <json_encoded>N</json_encoded>
+
+    <avro_in_field>N</avro_in_field>
+
+    <schema_in_field>N</schema_in_field>
+
+    <schema_in_field_is_path>N</schema_in_field_is_path>
+
+    <cache_schemas>N</cache_schemas>
+
+    <ignore_missing_fields>N</ignore_missing_fields>
+
+    <avro_fields>
+      <avro_field>
+        <field_name>id</field_name>
+
+        <field_path>&#x24;.id</field_path>
+
+        <field_type>Integer</field_type>
+
+      </avro_field>
+      <avro_field>
+        <field_name>age</field_name>
+
+        <field_path>&#x24;.age</field_path>
+
+        <field_type>Integer</field_type>
+
+      </avro_field>
+      <avro_field>
+        <field_name>destination_region</field_name>
+
+        <field_path>&#x24;.destination_region</field_path>
+
+        <field_type>String</field_type>
+
+      </avro_field>
+      <avro_field>
+        <field_name>destination_airport</field_name>
+
+        <field_path>&#x24;.destination_airport</field_path>
+
+        <field_type>String</field_type>
+
+      </avro_field>
+      <avro_field>
+        <field_name>price</field_name>
+
+        <field_path>&#x24;.price</field_path>
+
+        <field_type>Number</field_type>
+
+      </avro_field>
+      <avro_field>
+        <field_name>frequent_traveller</field_name>
+
+        <field_path>&#x24;.frequent_traveller</field_path>
+
+        <field_type>Integer</field_type>
+
+      </avro_field>
+    </avro_fields>    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>96</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
     </step>
 
   <step>
@@ -424,109 +894,37 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-       <calculation><field_name>discount_value</field_name>
-<calc_type>PERCENT_2</calc_type>
-<field_a>price</field_a>
-<field_b>discount_percent</field_b>
-<field_c/>
-<value_type>Number</value_type>
-<value_length>-1</value_length>
-<value_precision>-1</value_precision>
-<remove>N</remove>
-<conversion_mask/>
-<decimal_symbol/>
-<grouping_symbol/>
-<currency_symbol/>
-</calculation>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>640</xloc>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <calculation>
+      <field_name>final_price</field_name>
+      <calc_type>PERCENT_2</calc_type>
+      <field_a>price</field_a>
+      <field_b>discount_percent</field_b>
+      <field_c/>
+      <value_type>Number</value_type>
+      <value_length>-1</value_length>
+      <value_precision>-1</value_precision>
+      <remove>N</remove>
+      <conversion_mask/>
+      <decimal_symbol/>
+      <grouping_symbol/>
+      <currency_symbol/>
+    </calculation>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>576</xloc>
       <yloc>176</yloc>
       <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Data Grid</name>
-    <type>DataGrid</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>
-      <field>
-        <name>age</name>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
-      </field>
-      <field>
-        <name>destination_region</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
-      </field>
-      <field>
-        <name>destination_airport</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
-      </field>
-      <field>
-        <name>price</name>
-        <type>Number</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
-      </field>
-    </fields>
-    <data>
-      <line> <item>1</item><item>Asia</item><item>SIN</item><item>100</item> </line>
-      <line> <item>12</item><item>America</item><item>DEN</item><item>150</item> </line>
-      <line> <item>33</item><item>Africa</item><item>JNB</item><item>120</item> </line>
-      <line> <item>24</item><item>Europe</item><item>FRA</item><item>200</item> </line>
-      <line> <item>58</item><item>Europe</item><item>AMS</item><item>190</item> </line>
-      <line> <item>45</item><item>America</item><item>LAS</item><item>175</item> </line>
-      <line> <item>46</item><item>America</item><item>JFK</item><item>230</item> </line>
-      <line> <item>41</item><item>Europe</item><item>HAM</item><item>140</item> </line>
-      <line> <item>78</item><item>Europe</item><item>GVA</item><item>170</item> </line>
-      <line> <item>27</item><item>Europe</item><item>MAD</item><item>180</item> </line>
-      <line> <item>2</item><item>Europe</item><item>DUS</item><item>210</item> </line>
-      <line> <item>78</item><item>Asia</item><item>TYO</item><item>260</item> </line>
-    </data>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>192</xloc>
-      <yloc>64</yloc>
-      <draw>Y</draw>
-      </GUI>
+    </GUI>
     </step>
 
   <step>
@@ -536,16 +934,22 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>784</xloc>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>880</xloc>
       <yloc>176</yloc>
       <draw>Y</draw>
-      </GUI>
+    </GUI>
     </step>
 
   <step>
@@ -555,20 +959,26 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <rule_file_name>&#x24;&#x7b;rules_folder&#x7d;&#x2f;TravelDiscount.zip</rule_file_name>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <rule_file_name>&#x24;&#x7b;Internal.Transformation.Filename.Directory&#x7d;&#x2f;travel discount_dev.zip</rule_file_name>
     <rule_step_main>Select values</rule_step_main>
     <rule_step_rule_results>Select values 2</rule_step_rule_results>
     <output_type>0</output_type>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>384</xloc>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>288</xloc>
       <yloc>176</yloc>
       <draw>Y</draw>
-      </GUI>
+    </GUI>
     </step>
 
   <step>
@@ -578,22 +988,42 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>        <select_unspecified>N</select_unspecified>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>      <field>        <name>id</name>
+      </field>      <field>        <name>age</name>
+      </field>      <field>        <name>destination_region</name>
+      </field>      <field>        <name>destination_airport</name>
+      </field>      <field>        <name>price</name>
+      </field>      <field>        <name>discount_percent</name>
+      </field>      <field>        <name>frequent_traveller</name>
+      </field>      <field>        <name>ruleengine_groups</name>
+      </field>      <field>        <name>ruleengine_groups_failed</name>
+      </field>      <field>        <name>ruleengine_groups_skipped</name>
+      </field>      <field>        <name>ruleengine_rules</name>
+      </field>      <field>        <name>ruleengine_rules_failed</name>
+      </field>      <field>        <name>ruleengine_actions</name>
+      </field>        <select_unspecified>N</select_unspecified>
       <remove>        <name>ruleengine_groups</name>
       </remove>      <remove>        <name>ruleengine_groups_failed</name>
       </remove>      <remove>        <name>ruleengine_rules</name>
       </remove>      <remove>        <name>ruleengine_rules_failed</name>
       </remove>      <remove>        <name>ruleengine_actions</name>
-      </remove>    </fields>     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>512</xloc>
+      </remove>      <remove>        <name>ruleengine_groups_skipped</name>
+      </remove>    </fields>    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>448</xloc>
       <yloc>176</yloc>
       <draw>Y</draw>
-      </GUI>
+    </GUI>
     </step>
 
   <step>
@@ -603,23 +1033,86 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>        <select_unspecified>N</select_unspecified>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>      <field>        <name>id</name>
+      </field>      <field>        <name>age</name>
+      </field>      <field>        <name>destination_region</name>
+      </field>      <field>        <name>destination_airport</name>
+      </field>      <field>        <name>price</name>
+      </field>      <field>        <name>discount_percent</name>
+      </field>      <field>        <name>ruleengine_group</name>
+      </field>      <field>        <name>ruleengine_group_failed</name>
+      </field>      <field>        <name>ruleengine_subgroup</name>
+      </field>      <field>        <name>ruleengine_subgroup_failed</name>
+      </field>      <field>        <name>ruleengine_subgroup_intergroup_operator</name>
+      </field>      <field>        <name>ruleengine_subgroup_rule_operator</name>
+      </field>      <field>        <name>ruleengine_rule</name>
+      </field>      <field>        <name>ruleengine_rule_failed</name>
+      </field>      <field>        <name>ruleengine_message</name>
+      </field>        <select_unspecified>N</select_unspecified>
       <remove>        <name>ruleengine_group</name>
-      </remove>      <remove>        <name>ruleengine_group_failed</name>
       </remove>      <remove>        <name>ruleengine_subgroup</name>
       </remove>      <remove>        <name>ruleengine_subgroup_failed</name>
       </remove>      <remove>        <name>ruleengine_subgroup_intergroup_operator</name>
       </remove>      <remove>        <name>ruleengine_subgroup_rule_operator</name>
-      </remove>    </fields>     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>384</xloc>
-      <yloc>272</yloc>
+      </remove>      <remove>        <name>destination_airport</name>
+      </remove>    </fields>    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>288</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
-      </GUI>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Sort rows</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>out</prefix>
+      <sort_size>1000000</sort_size>
+      <free_memory/>
+      <compress>N</compress>
+      <compress_variable/>
+      <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>id</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>736</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
     </step>
 
   <step>
@@ -629,22 +1122,27 @@
     <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>384</xloc>
-      <yloc>384</yloc>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>288</xloc>
+      <yloc>352</yloc>
       <draw>Y</draw>
-      </GUI>
+    </GUI>
     </step>
 
   <step_error_handling>
   </step_error_handling>
-   <slave-step-copy-partition-distribution>
-</slave-step-copy-partition-distribution>
-   <slave_transformation>N</slave_transformation>
-
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
 </transformation>

@@ -431,14 +431,14 @@
     <created_date>2017&#x2f;08&#x2f;20 11&#x3a;21&#x3a;19.658</created_date>
     <modified_user>-</modified_user>
     <modified_date>2017&#x2f;08&#x2f;20 11&#x3a;21&#x3a;19.658</modified_date>
-    <key_for_session_key/>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA&#x3d;</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
     <notepad>
       <note>some input data</note>
-      <xloc>32</xloc>
-      <yloc>64</yloc>
+      <xloc>64</xloc>
+      <yloc>16</yloc>
       <width>105</width>
       <heigth>27</heigth>
       <fontname>Cantarell</fontname>
@@ -458,8 +458,8 @@
     </notepad>
     <notepad>
       <note>calculate the&#xa;actual discount</note>
-      <xloc>720</xloc>
-      <yloc>96</yloc>
+      <xloc>624</xloc>
+      <yloc>112</yloc>
       <width>99</width>
       <heigth>44</heigth>
       <fontname>Cantarell</fontname>
@@ -507,16 +507,6 @@
   </connection>
   <order>
     <hop>
-      <from>Calculator</from>
-      <to>Dummy &#x28;do nothing&#x29;</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Data Grid</from>
-      <to>Add constants&#x3a; discount_percent</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Select values</from>
       <to>Calculator</to>
       <enabled>Y</enabled>
@@ -554,6 +544,21 @@
     <hop>
       <from>Set discount value 2</from>
       <to>Select values</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Calculator</from>
+      <to>Sort rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>Dummy &#x28;do nothing&#x29;</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Avro Input</from>
+      <to>Add constants&#x3a; discount_percent</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -614,8 +619,99 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>192</xloc>
-      <yloc>176</yloc>
+      <xloc>96</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Avro Input</name>
+    <type>AvroInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+
+    <avro_filename>&#x24;&#x7b;Internal.Transformation.Filename.Directory&#x7d;&#x2f;discount_sample.avro</avro_filename>
+
+    <schema_filename>file&#x3a;&#x2f;&#x2f;&#x2f;home&#x2f;uwe&#x2f;development&#x2f;pcm17&#x2f;discount_sample.avsc</schema_filename>
+
+    <json_encoded>N</json_encoded>
+
+    <avro_in_field>N</avro_in_field>
+
+    <schema_in_field>N</schema_in_field>
+
+    <schema_in_field_is_path>N</schema_in_field_is_path>
+
+    <cache_schemas>N</cache_schemas>
+
+    <ignore_missing_fields>N</ignore_missing_fields>
+
+    <avro_fields>
+      <avro_field>
+        <field_name>id</field_name>
+
+        <field_path>&#x24;.id</field_path>
+
+        <field_type>Integer</field_type>
+
+      </avro_field>
+      <avro_field>
+        <field_name>age</field_name>
+
+        <field_path>&#x24;.age</field_path>
+
+        <field_type>Integer</field_type>
+
+      </avro_field>
+      <avro_field>
+        <field_name>destination_region</field_name>
+
+        <field_path>&#x24;.destination_region</field_path>
+
+        <field_type>String</field_type>
+
+      </avro_field>
+      <avro_field>
+        <field_name>destination_airport</field_name>
+
+        <field_path>&#x24;.destination_airport</field_path>
+
+        <field_type>String</field_type>
+
+      </avro_field>
+      <avro_field>
+        <field_name>price</field_name>
+
+        <field_path>&#x24;.price</field_path>
+
+        <field_type>Number</field_type>
+
+      </avro_field>
+      <avro_field>
+        <field_name>frequent_traveller</field_name>
+
+        <field_path>&#x24;.frequent_traveller</field_path>
+
+        <field_type>Integer</field_type>
+
+      </avro_field>
+    </avro_fields>    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>96</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
     </step>
@@ -654,115 +750,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>752</xloc>
-      <yloc>176</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Data Grid</name>
-    <type>DataGrid</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>age</name>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
-      </field>
-      <field>
-        <name>destination_region</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
-      </field>
-      <field>
-        <name>destination_airport</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
-      </field>
-      <field>
-        <name>price</name>
-        <type>Number</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
-      </field>
-      <field>
-        <name>id</name>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
-      </field>
-      <field>
-        <name>frequent_traveler</name>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
-      </field>
-    </fields>
-    <data>
-      <line> <item>1</item><item>Asia</item><item>SIN</item><item>100</item><item>1</item><item>0</item> </line>
-      <line> <item>12</item><item>America</item><item>DEN</item><item>150</item><item>2</item><item>0</item> </line>
-      <line> <item>33</item><item>Africa</item><item>JNB</item><item>120</item><item>3</item><item>0</item> </line>
-      <line> <item>24</item><item>Europe</item><item>FRA</item><item>200</item><item>4</item><item>1</item> </line>
-      <line> <item>58</item><item>Europe</item><item>AMS</item><item>190</item><item>5</item><item>0</item> </line>
-      <line> <item>45</item><item>America</item><item>LAS</item><item>175</item><item>6</item><item>0</item> </line>
-      <line> <item>46</item><item>America</item><item>JFK</item><item>230</item><item>7</item><item>0</item> </line>
-      <line> <item>41</item><item>Europe</item><item>HAM</item><item>140</item><item>8</item><item>0</item> </line>
-      <line> <item>78</item><item>Europe</item><item>GVA</item><item>170</item><item>9</item><item>0</item> </line>
-      <line> <item>27</item><item>Europe</item><item>MAD</item><item>180</item><item>10</item><item>0</item> </line>
-      <line> <item>2</item><item>Europe</item><item>DUS</item><item>210</item><item>11</item><item>1</item> </line>
-      <line> <item>78</item><item>Asia</item><item>TYO</item><item>260</item><item>12</item><item>1</item> </line>
-    </data>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>192</xloc>
-      <yloc>64</yloc>
+      <xloc>656</xloc>
+      <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
     </step>
@@ -786,148 +775,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>912</xloc>
-      <yloc>176</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Filter rows 2</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-<send_true_to>Set discount value</send_true_to>
-<send_false_to>Filter rows</send_false_to>
-    <compare>
-<condition>
- <negated>N</negated>
- <conditions>
-  <condition>
-   <negated>N</negated>
-   <leftvalue>age</leftvalue>
-   <function>&#x3c;</function>
-   <rightvalue/>
-   <value><name>constant</name><type>Integer</type><text>3</text><length>-1</length><precision>0</precision><isnull>N</isnull><mask>&#x23;&#x3b;-&#x23;</mask></value>   </condition>
-  </conditions>
- </condition>
-    </compare>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>400</xloc>
-      <yloc>64</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Set discount value 2</name>
-    <type>SetValueField</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>discount_percent</name>
-        <replaceby>twentyfive</replaceby>
-        </field>
-      </fields>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>400</xloc>
-      <yloc>288</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Set discount value</name>
-    <type>SetValueField</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>discount_percent</name>
-        <replaceby>hundred</replaceby>
-        </field>
-      </fields>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>592</xloc>
-      <yloc>64</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Select values</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>      <field>        <name>age</name>
-        <rename/>
-      </field>      <field>        <name>destination_region</name>
-        <rename/>
-      </field>      <field>        <name>destination_airport</name>
-        <rename/>
-      </field>      <field>        <name>price</name>
-        <rename/>
-      </field>      <field>        <name>discount_percent</name>
-        <rename/>
-      </field>      <field>        <name>frequent_traveler</name>
-        <rename/>
-      </field>        <select_unspecified>N</select_unspecified>
-    </fields>    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>592</xloc>
-      <yloc>176</yloc>
+      <xloc>896</xloc>
+      <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
     </step>
@@ -973,8 +822,185 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>400</xloc>
-      <yloc>176</yloc>
+      <xloc>304</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Filter rows 2</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+<send_true_to>Set discount value</send_true_to>
+<send_false_to>Filter rows</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <conditions>
+  <condition>
+   <negated>N</negated>
+   <leftvalue>age</leftvalue>
+   <function>&#x3c;</function>
+   <rightvalue/>
+   <value><name>constant</name><type>Integer</type><text>3</text><length>-1</length><precision>0</precision><isnull>N</isnull><mask>&#x23;&#x3b;-&#x23;</mask></value>   </condition>
+  </conditions>
+ </condition>
+    </compare>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>304</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Select values</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>      <field>        <name>id</name>
+      </field>      <field>        <name>age</name>
+      </field>      <field>        <name>destination_region</name>
+      </field>      <field>        <name>destination_airport</name>
+      </field>      <field>        <name>price</name>
+      </field>      <field>        <name>discount_percent</name>
+      </field>      <field>        <name>frequent_traveller</name>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>496</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Set discount value</name>
+    <type>SetValueField</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>discount_percent</name>
+        <replaceby>hundred</replaceby>
+        </field>
+      </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>496</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Set discount value 2</name>
+    <type>SetValueField</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>discount_percent</name>
+        <replaceby>twentyfive</replaceby>
+        </field>
+      </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>304</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Sort rows</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>out</prefix>
+      <sort_size>1000000</sort_size>
+      <free_memory/>
+      <compress>N</compress>
+      <compress_variable/>
+      <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>id</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>768</xloc>
+      <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
     </step>
