@@ -9,11 +9,6 @@
     <trans_status>0</trans_status>
     <directory>&#x2f;</directory>
     <parameters>
-      <parameter>
-        <name>rules_folder</name>
-        <default_value>&#x2f;home&#x2f;uwe&#x2f;development&#x2f;git&#x2f;ruleengine_samples&#x2f;discount</default_value>
-        <description>folder where the project file from the Business Rules Maintennce Tool is located</description>
-      </parameter>
     </parameters>
     <log>
       <trans-log-table>
@@ -810,7 +805,7 @@
 
     <avro_filename>&#x24;&#x7b;Internal.Transformation.Filename.Directory&#x7d;&#x2f;discount_sample.avro</avro_filename>
 
-    <schema_filename>file&#x3a;&#x2f;&#x2f;&#x2f;home&#x2f;uwe&#x2f;development&#x2f;pcm17&#x2f;discount_sample.avsc</schema_filename>
+    <schema_filename>&#x24;&#x7b;Internal.Transformation.Filename.Directory&#x7d;&#x2f;discount_sample.avsc</schema_filename>
 
     <json_encoded>N</json_encoded>
 
@@ -947,6 +942,35 @@
     </remotesteps>
     <GUI>
       <xloc>880</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Rule Engine</name>
+    <type>JareRuleEngine</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <rule_file_name>&#x24;&#x7b;Internal.Transformation.Filename.Directory&#x7d;&#x2f;travel discount_dev.zip</rule_file_name>
+    <rule_step_main>Select values</rule_step_main>
+    <rule_step_rule_results>Select values 2</rule_step_rule_results>
+    <output_type>0</output_type>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>288</xloc>
       <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1107,35 +1131,6 @@
     <GUI>
       <xloc>288</xloc>
       <yloc>368</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Rule Engine</name>
-    <type>JareRuleEngine</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <rule_file_name>&#x24;&#x7b;Internal.Transformation.Filename.Directory&#x7d;&#x2f;travel discount_dev.zip</rule_file_name>
-    <rule_step_main>Select values</rule_step_main>
-    <rule_step_rule_results>Select values 2</rule_step_rule_results>
-    <output_type>0</output_type>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>288</xloc>
-      <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
     </step>

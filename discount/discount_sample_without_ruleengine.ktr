@@ -639,7 +639,7 @@
 
     <avro_filename>&#x24;&#x7b;Internal.Transformation.Filename.Directory&#x7d;&#x2f;discount_sample.avro</avro_filename>
 
-    <schema_filename>file&#x3a;&#x2f;&#x2f;&#x2f;home&#x2f;uwe&#x2f;development&#x2f;pcm17&#x2f;discount_sample.avsc</schema_filename>
+    <schema_filename>&#x24;&#x7b;Internal.Transformation.Filename.Directory&#x7d;&#x2f;discount_sample.avsc</schema_filename>
 
     <json_encoded>N</json_encoded>
 
