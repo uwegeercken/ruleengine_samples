@@ -6,4 +6,4 @@ Files:
 - TravelDiscount.zip: Project file containing Rules and actions
 
 
-last update: uwe geercken - 2016-06-30
+last update: uwe geercken - 2017-11-13

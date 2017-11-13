@@ -9,31 +9,6 @@
     <trans_status>0</trans_status>
     <directory>&#x2f;</directory>
     <parameters>
-      <parameter>
-        <name>parameter_input_filename</name>
-        <default_value>airports.csv</default_value>
-        <description/>
-      </parameter>
-      <parameter>
-        <name>parameter_input_filename_metadata</name>
-        <default_value>airports_metadata.xlsx</default_value>
-        <description/>
-      </parameter>
-      <parameter>
-        <name>parameter_output_filename_ruleengine_results</name>
-        <default_value>airports_filtered</default_value>
-        <description/>
-      </parameter>
-      <parameter>
-        <name>parameter_output_filename_ruleengine_rule_details</name>
-        <default_value>airports_ruleengine_details</default_value>
-        <description/>
-      </parameter>
-      <parameter>
-        <name>parameter_rule_project_filename</name>
-        <default_value>airport_filter_01.zip</default_value>
-        <description/>
-      </parameter>
     </parameters>
     <log>
       <trans-log-table>
